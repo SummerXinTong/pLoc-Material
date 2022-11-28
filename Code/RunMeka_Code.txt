@@ -1,0 +1,20 @@
+// pLoc-mHum-RAKEL
+@echo off
+for /l %I in (2,1,14) do  java -cp "./lib/*" meka.classifiers.multilabel.RAkEL -verbosity 5 -t E:\SZnCu\pLoc-mHum\Human.arff  -M 10 -k %I -P 0 -N 0 -S 0 -x 3106 -W weka.classifiers.trees.RandomForest -- -P 100 -I 100 -num-slots 1 -K 0 -M 1.0 -V 0.001 -S 1 > E:\SZnCu\pLoc-mHum\x_3106\pLoc-mAnimal_rakel_k_%I_x_3106.txt
+pause
+
+pLoc-mAnimal-RAKEL
+@echo off
+for /l %I in (2,1,20) do  java -cp "./lib/*" meka.classifiers.multilabel.RAkEL -verbosity 5 -t E:\SZnCu\pLoc-mAnimal\pLoc-mAnimal.arff  -M 10 -k %I -P 0 -N 0 -S 0 -x 3919 -W weka.classifiers.trees.RandomForest -- -P 100 -I 100 -num-slots 1 -K 0 -M 1.0 -V 0.001 -S 1 > E:\SZnCu\pLoc-mAnimal\x_3919\pLoc-mAnimal_rakel_k_%I_x_3919.txt
+pause
+
+// pLoc-mGneg-RAKEL
+@echo off
+for /l %I in (2,1,8) do  java -cp "./lib/*" meka.classifiers.multilabel.RAkEL -verbosity 5 -t E:\SZnCu\pLoc-mGneg\Gram-negative.arff  -M 10 -k %I -P 0 -N 0 -S 0 -x 1392 -W weka.classifiers.trees.RandomForest -- -P 100 -I 100 -num-slots 1 -K 0 -M 1.0 -V 0.001 -S 1 > E:\SZnCu\pLoc-mGneg\x_1392\pLoc-mAnimal_rakel_k_%I_x_1392.txt
+pause
+
+// pLoc-mEuk-RAKEL
+@echo off
+for /l %I in (2,1,22) do  java -cp "./lib/*" meka.classifiers.multilabel.RAkEL -verbosity 5 -t E:\SZnCu\pLoc-mEuk\Eukaryotic.arff  -M 10 -k %I -P 0 -N 0 -S 0 -x 7766 -W weka.classifiers.trees.RandomForest -- -P 100 -I 100 -num-slots 1 -K 0 -M 1.0 -V 0.001 -S 1 > E:\SZnCu\pLoc-mEuk\x_7766\pLoc-mAnimal_rakel_k_%I_x_7766.txt
+pause
+
